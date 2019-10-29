@@ -42,6 +42,6 @@ module.exports = {
 		})
 	],
 	optimization: {
-		minimizer: new TerserPlugin()
+		minimizer: [new TerserPlugin()]
 	}
 };
