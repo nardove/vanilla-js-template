@@ -1,35 +1,26 @@
 {
 	"name": "vanilla-js-template",
 	"version": "1.0.0",
-	"description": "Basic vanilla js template setup",
-	"main": "index.js",
+	"description": "I'm using this as a template for creating vanilla js projects using webpack.",
+	"main": "./src/js/index.js",
 	"scripts": {
-		"build": "webpack",
-		"start": "webpack-dev-server --open --hot"
+		"dev": "rm -rf ./development && rm -rf ./.cache && parcel public/index.html --out-dir development -p 3000",
+		"build": "parcel build public/index.html --out-dir dist --public-url ./"
 	},
-	"author": "Ricardo Sanchez",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nardove/vanilla-js-template.git"
+	},
+	"author": "",
 	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nardove/vanilla-js-template/issues"
+	},
+	"homepage": "https://github.com/nardove/vanilla-js-template#readme",
 	"devDependencies": {
-		"@babel/core": "^7.6.4",
-		"@babel/preset-env": "^7.6.3",
-		"babel-eslint": "^10.0.3",
-		"babel-loader": "^8.0.6",
-		"css-loader": "^3.2.0",
-		"eslint": "^6.6.0",
-		"eslint-config-standard": "^14.1.0",
-		"eslint-plugin-import": "^2.18.2",
-		"eslint-plugin-node": "^10.0.0",
-		"eslint-plugin-promise": "^4.2.1",
-		"eslint-plugin-standard": "^4.0.1",
-		"file-loader": "^4.2.0",
-		"html-loader": "^0.5.5",
-		"html-webpack-plugin": "^3.2.0",
-		"mini-css-extract-plugin": "^0.8.0",
-		"node-sass": "^4.13.0",
-		"sass-loader": "^8.0.0",
-		"style-loader": "^1.0.0",
-		"webpack": "^4.41.2",
-		"webpack-cli": "^3.3.9",
-		"webpack-dev-server": "^3.9.0"
+		"@babel/core": "^7.11.6",
+		"@babel/plugin-transform-runtime": "^7.11.5",
+		"@babel/runtime-corejs2": "^7.11.2",
+		"sass": "^1.26.10"
 	}
 }
